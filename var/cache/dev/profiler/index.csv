@@ -1,0 +1,16 @@
+469d93,::1,GET,http://localhost/bookcatalogue/public/,1616325225,,404
+448c37,::1,GET,http://localhost/bookcatalogue/public/,1616326365,,404
+cfb887,127.0.0.1,GET,http://127.0.0.1:8000/,1616330611,,404
+0621a7,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1616330616,119111,404
+119111,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1616330616,,404
+ed50a6,127.0.0.1,GET,http://127.0.0.1:8000/dashboard,1616330659,c3e1e7,404
+c3e1e7,127.0.0.1,GET,http://127.0.0.1:8000/dashboard,1616330659,,404
+429fa6,::1,GET,http://localhost/bookcatalogue/public/,1616334234,,404
+334ca3,::1,GET,http://localhost/bookcatalogue/public/dashboard,1616334245,158c00,404
+158c00,::1,GET,http://localhost/bookcatalogue/public/dashboard,1616334245,,404
+8644e7,::1,GET,http://localhost/bookcatalogue/public/,1616334621,,404
+f2ac4c,::1,GET,http://localhost/bookcatalogue/public/dashboard,1616334654,808415,404
+808415,::1,GET,http://localhost/bookcatalogue/public/dashboard,1616334654,,404
+47a50d,::1,GET,http://localhost/bookcatalogue/public/,1616523982,,404
+3967f6,::1,GET,http://localhost/bookcatalogue/public/register,1616524016,66c641,404
+66c641,::1,GET,http://localhost/bookcatalogue/public/register,1616524016,,404
