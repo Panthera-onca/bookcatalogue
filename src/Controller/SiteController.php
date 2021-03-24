@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SiteController extends AbstractController
 {
     /**
-     * @Route("/", name="site_index", methods={"GET"})
+     * @Route("/site/", name="site_index", methods={"GET"})
      */
     public function index(SiteRepository $siteRepository): Response
     {
@@ -26,7 +26,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="site_new", methods={"GET","POST"})
+     * @Route("/site/new", name="site_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="site_show", methods={"GET"})
+     * @Route("/site/{id}", name="site_show", methods={"GET"})
      */
     public function show(Site $site): Response
     {
@@ -59,7 +59,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="site_edit", methods={"GET","POST"})
+     * @Route("/site/{id}/edit", name="site_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Site $site): Response
     {
@@ -79,7 +79,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="site_delete", methods={"DELETE"})
+     * @Route("/site/{id}", name="site_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Site $site): Response
     {

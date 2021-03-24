@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FiliereController extends AbstractController
 {
     /**
-     * @Route("/", name="filiere_index", methods={"GET"})
+     * @Route("/filiere/", name="filiere_index", methods={"GET"})
      */
     public function index(FiliereRepository $filiereRepository): Response
     {
@@ -26,7 +26,7 @@ class FiliereController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="filiere_new", methods={"GET","POST"})
+     * @Route("/filiere/new", name="filiere_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class FiliereController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="filiere_show", methods={"GET"})
+     * @Route("/filiere/{id}", name="filiere_show", methods={"GET"})
      */
     public function show(Filiere $filiere): Response
     {
@@ -59,7 +59,7 @@ class FiliereController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="filiere_edit", methods={"GET","POST"})
+     * @Route("/filiere/{id}/edit", name="filiere_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Filiere $filiere): Response
     {
@@ -79,7 +79,7 @@ class FiliereController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="filiere_delete", methods={"DELETE"})
+     * @Route("/filiere/{id}", name="filiere_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Filiere $filiere): Response
     {

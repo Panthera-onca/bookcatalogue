@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class StockController extends AbstractController
 {
     /**
-     * @Route("/", name="stock_index", methods={"GET"})
+     * @Route("/stock/", name="stock_index", methods={"GET"})
      */
     public function index(StockRepository $stockRepository): Response
     {
@@ -26,7 +26,7 @@ class StockController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="stock_new", methods={"GET","POST"})
+     * @Route("/stock/new", name="stock_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class StockController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="stock_show", methods={"GET"})
+     * @Route("/stock/{id}", name="stock_show", methods={"GET"})
      */
     public function show(Stock $stock): Response
     {
@@ -59,7 +59,7 @@ class StockController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="stock_edit", methods={"GET","POST"})
+     * @Route("/stock/{id}/edit", name="stock_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Stock $stock): Response
     {
@@ -79,7 +79,7 @@ class StockController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="stock_delete", methods={"DELETE"})
+     * @Route("/stock/{id}", name="stock_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Stock $stock): Response
     {

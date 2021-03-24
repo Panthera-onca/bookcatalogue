@@ -27,7 +27,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminController extends AbstractController
 {
     /**
-     * @Route("/dashboard", name="app_admin_dashboard")
+     * @Route("/dashboard", name="app_admin_dashboard", methods={"GET", "POST"})
      * @param LoggerInterface $logger
      * @return Response
      */
@@ -57,7 +57,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/user", name="app_admin_dashboard_user")
+     * @Route("/dashboard/user", name="app_admin_dashboard_user", methods={"GET", "POST"})
      * @return Response
      */
     public function getAllUser()
@@ -75,7 +75,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/user/edit/{username}", name="app_admin_dashboard_user_edit")
+     * @Route("/dashboard/user/edit/{username}", name="app_admin_dashboard_user_edit", methods={"GET", "POST"})
      * @param Request $request
      * @param $username
      * @return Response
@@ -115,7 +115,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/livre/add", name="app_admin_dashboard_livre_add")
+     * @Route("/dashboard/livre/add", name="app_admin_dashboard_livre_add", methods={"GET", "POST"})
      * @param Request $request
      * @return Response
      */
@@ -161,7 +161,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/stock/add", name="app_admin_dashboard_stock_add")
+     * @Route("/dashboard/stock/add", name="app_admin_dashboard_stock_add", methods={"GET", "POST"})
      * @param Request $request
      * @return Response
      */
@@ -206,7 +206,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/delete/admin/{id}",defaults={"id" = 0} ,name="app_admin_delete_confirm")
+     * @Route("/dashboard/delete/admin/{id}",defaults={"id" = 0} ,name="app_admin_delete_confirm", methods={"DELETE"})
      * @return RedirectResponse
      * @param $id
      */

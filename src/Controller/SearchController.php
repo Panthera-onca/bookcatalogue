@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SearchController extends AbstractController
 {
     /**
-     * @Route("/search", name="search")
+     * @Route("/search", name="search", methods={"GET", "POST"})
      */
     public function index(): Response
     {
@@ -26,7 +26,7 @@ class SearchController extends AbstractController
 
     /**
      * Matches /search_livres
-     * @Route("/search_livres", name="app_searchLivre")
+     * @Route("/search_livres", name="app_searchLivre", methods={"GET", "POST"})
      * @param Request $request
      * @return Response
      */
@@ -67,7 +67,7 @@ class SearchController extends AbstractController
 
     /**
      * Matches /recherche
-     * @Route("/recherche", name="app_recherche")
+     * @Route("/recherche", name="app_recherche", methods={"GET", "POST"})
      * @param Request $request
      * @return Response
      */
@@ -97,7 +97,7 @@ class SearchController extends AbstractController
     }
 
     /**
-     * @Route("/resultat/{titre_livre}", name="app_resultat")
+     * @Route("/resultat/{titre_livre}", name="app_resultat", methods={"GET", "POST"})
      * @param $livre
      * @return Response
      */

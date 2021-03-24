@@ -1,3 +1,232 @@
 index:
     path: /
     controller: App\Controller\DefaultController::index
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+
+app_admin_dashboard:
+    path: /dashboard
+    controller: App\Controller\AdminController::dashboard
+
+app_admin_dashboard_user:
+    path: /dashboard/user
+    controller: App\Controller\AdminController::getAllUser
+
+app_admin_dashboard_user_edit:
+    path: /dashboard/user/edit/{username}
+    controller: App\Controller\AdminController::editOneUser
+
+app_admin_dashboard_livre_add:
+    path: /dashboard/livre/add
+    controller: App\Controller\AdminController::addLivre
+
+app_admin_dashboard_stock_add:
+    path: /app_admin_dashboard_stock_add
+    controller: App\Controller\AdminController::addStock
+
+app_admin_delete_confirm:
+    path: /dashboard/delete/admin/{id}
+    controller: App\Controller\AdminController::adminDeleteUserConfirm
+
+app_admin_stock_delete:
+    path: /dashboard/stock/{id}
+    controller: App\Controller\AdminController::delete_stock
+
+app_admin_livre_delete:
+    path: /dashboard/livre/{id}
+    controller: App\Controller\AdminController::delete_livre
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+user_index:
+    path: /user/
+    controller: App\Controller\UserController::index
+
+user_new:
+    path: /user/new
+    controller: App\Controller\UserController::new
+
+user_show:
+    path: /user/{id}
+    controller: App\Controller\UserController::show
+
+user_edit:
+    path: /user/{id}/edit
+    controller: App\Controller\UserController::edit
+
+user_delete:
+    path: /user/{id}
+    controller: App\Controller\UserController::delete
+
+search:
+    path: /search
+    controller: App\Controller\SearchController::index
+
+app_searchLivre:
+    path: /search_livres
+    controller: App\Controller\SearchController::rechercheLivres
+
+app_recherche:
+    path: /recherche
+    controller: App\Controller\SearchController::recherche
+
+app_resultat:
+    path: /resultat/{titre_livre}
+    controller: App\Controller\SearchController::resultat
+
+livre_index:
+    path: /livre/
+    controller: App\Controller\LivreController::index
+
+livre_new:
+    path: /livre/new
+    controller: App\Controller\LivreController::new
+
+livre_show:
+    path: /livre/{id}
+    controller: App\Controller\LivreController::show
+
+livre_edit:
+    path: /livre/{id}/edit
+    controller: App\Controller\LivreController::edit
+
+livre_delete:
+    path: /livre/{id}
+    controller: App\Controller\LivreController::delete
+
+
+stock_index:
+    path: /stock/
+    controller: App\Controller\StockController::index
+
+stock_new:
+    path: /stock/new
+    controller: App\Controller\StockController::new
+
+stock_show:
+    path: /stock/{id}
+    controller: App\Controller\StockController::show
+
+stock_edit:
+    path: /stock/{id}/edit
+    controller: App\Controller\StockController::edit
+
+stock_delete:
+    path: /stock/{id}
+    controller: App\Controller\StockController::delete
+
+site_index:
+    path: /site/
+    controller: App\Controller\SiteController::index
+
+site_new:
+    path: /site/new
+    controller: App\Controller\SiteController::new
+
+site_show:
+    path: /site/{id}
+    controller: App\Controller\SiteController::show
+
+site_edit:
+    path: /site/{id}/edit
+    controller: App\Controller\SiteController::edit
+
+site_delete:
+    path: /site/{id}
+    controller: App\Controller\SiteController::delete
+
+categorie_index:
+    path: /categorie/
+    controller: App\Controller\CategorieController::index
+
+categorie_new:
+    path: /categorie/new
+    controller: App\Controller\CategorieController::new
+
+categorie_show:
+    path: /categorie/{id}
+    controller: App\Controller\CategorieController::show
+
+categorie_edit:
+    path: /categorie/{id}/edit
+    controller: App\Controller\CategorieController::edit
+
+categorie_delete:
+    path: /categorie/{id}
+    controller: App\Controller\CategorieController::delete
+
+filiere_index:
+    path: /filiere/
+    controller: App\Controller\FiliereController::index
+
+filiere_new:
+    path: /filiere/new
+    controller: App\Controller\FiliereController::new
+
+filiere_show:
+    path: /filiere/{id}
+    controller: App\Controller\FiliereController::show
+
+filiere_edit:
+    path: /filiere/{id}/edit
+    controller: App\Controller\FiliereController::edit
+
+filiere_delete:
+    path: /filiere/{id}
+    controller: App\Controller\FiliereController::delete
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
