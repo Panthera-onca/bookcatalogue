@@ -75,25 +75,19 @@ class StockRepository extends ServiceEntityRepository
      */
     public function findOneById($id)
     {
-        try {
             return $this->createQueryBuilder('u')
                 ->andWhere('u.id = :id')
                 ->setParameter('id', $id)
                 ->getQuery()
                 ->getOneOrNullResult();
-        } catch (NonUniqueResultException $e) {
-        }
     }
 
     public function findOneByName($livre)
     {
-        try {
             return $this->createQueryBuilder('u')
                 ->andWhere('u.livre = :name')
                 ->setParameter('livre', $livre)
                 ->getQuery()
                 ->getOneOrNullResult();
-        } catch (NonUniqueResultException $e) {
-        }
     }
 }

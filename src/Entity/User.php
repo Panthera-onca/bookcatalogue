@@ -64,16 +64,6 @@ class User implements UserInterface
      */
     private $plainPassword;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Site::class, inversedBy="users")
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $site;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="users")
-     */
-    private $categorie;
 
 
 
@@ -192,27 +182,5 @@ class User implements UserInterface
         $this->plainPassword = null;
     }
 
-    public function getSite(): ?Site
-    {
-        return $this->site;
-    }
 
-    public function setSite(?Site $site): self
-    {
-        $this->site = $site;
-
-        return $this;
-    }
-
-    public function getCategorie(): ?Categorie
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(?Categorie $categorie): self
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
 }

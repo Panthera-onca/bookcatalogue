@@ -27,8 +27,6 @@ class UserType extends AbstractType
                 'label' => 'roles'
             ])
             ->add('password')
-            ->add('site')
-            ->add('categorie')
         ;
     }
 

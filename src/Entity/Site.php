@@ -40,11 +40,6 @@ class Site
     private $ville;
 
     /**
-     * @ORM\OneToMany(targetEntity=User::class, mappedBy="site")
-     */
-    private $users;
-
-    /**
      * @ORM\OneToMany(targetEntity=Stock::class, mappedBy="site")
      */
     private $stocks;
@@ -108,35 +103,6 @@ class Site
         return $this;
     }
 
-    /**
-     * @return Collection|User[]
-     */
-    public function getUsers(): Collection
-    {
-        return $this->users;
-    }
-
-    public function addUser(User $user): self
-    {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-            $user->setSite($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUser(User $user): self
-    {
-        if ($this->users->removeElement($user)) {
-            // set the owning side to null (unless already changed)
-            if ($user->getSite() === $this) {
-                $user->setSite(null);
-            }
-        }
-
-        return $this;
-    }
 
     /**
      * @return Collection|Stock[]
