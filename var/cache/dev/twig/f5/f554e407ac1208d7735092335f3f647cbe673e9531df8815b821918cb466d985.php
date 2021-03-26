@@ -117,24 +117,12 @@ class __TwigTemplate_4d85577d36dfd1e378f206b1e28ad5d84795cf806bf479abaa5dcb7c994
     <div class=\"form-group\">
         ";
         // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["editForm"]) || array_key_exists("editForm", $context) ? $context["editForm"] : (function () { throw new RuntimeError('Variable "editForm" does not exist.', 21, $this->source); })()), "site", [], "any", false, false, false, 21), 'row');
-        echo "
-    </div>
-    <div class=\"form-group\">
-        ";
-        // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["editForm"]) || array_key_exists("editForm", $context) ? $context["editForm"] : (function () { throw new RuntimeError('Variable "editForm" does not exist.', 24, $this->source); })()), "categorie", [], "any", false, false, false, 24), 'row');
-        echo "
-    </div>
-    <div class=\"form-group\">
-        ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["editForm"]) || array_key_exists("editForm", $context) ? $context["editForm"] : (function () { throw new RuntimeError('Variable "editForm" does not exist.', 27, $this->source); })()), "roles", [], "any", false, false, false, 27), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["editForm"]) || array_key_exists("editForm", $context) ? $context["editForm"] : (function () { throw new RuntimeError('Variable "editForm" does not exist.', 21, $this->source); })()), "roles", [], "any", false, false, false, 21), 'row');
         echo "
     </div>
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"";
-        // line 30
+        // line 24
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("edit"), "html", null, true);
         echo "\"
     >
@@ -142,12 +130,12 @@ class __TwigTemplate_4d85577d36dfd1e378f206b1e28ad5d84795cf806bf479abaa5dcb7c994
         <button type=\"submit\" class=\"btnBlock btn-lg btn-success\" value=\"Edit\">Modifier</button>
     </div>
     ";
-        // line 35
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["editForm"]) || array_key_exists("editForm", $context) ? $context["editForm"] : (function () { throw new RuntimeError('Variable "editForm" does not exist.', 35, $this->source); })()), 'form_end');
+        // line 29
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["editForm"]) || array_key_exists("editForm", $context) ? $context["editForm"] : (function () { throw new RuntimeError('Variable "editForm" does not exist.', 29, $this->source); })()), 'form_end');
         echo "
 
     <a class=\"btn btn-lg btn-dark\" href=\"";
-        // line 37
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin_dashboard_user");
         echo "\">Retour</a>
 
@@ -175,7 +163,7 @@ class __TwigTemplate_4d85577d36dfd1e378f206b1e28ad5d84795cf806bf479abaa5dcb7c994
 
     public function getDebugInfo()
     {
-        return array (  151 => 37,  146 => 35,  138 => 30,  132 => 27,  126 => 24,  120 => 21,  114 => 18,  108 => 15,  102 => 12,  96 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  139 => 31,  134 => 29,  126 => 24,  120 => 21,  114 => 18,  108 => 15,  102 => 12,  96 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -198,12 +186,6 @@ class __TwigTemplate_4d85577d36dfd1e378f206b1e28ad5d84795cf806bf479abaa5dcb7c994
     </div>
     <div class=\"form-group\">
         {{ form_row(editForm.prenom) }}
-    </div>
-    <div class=\"form-group\">
-        {{ form_row(editForm.site) }}
-    </div>
-    <div class=\"form-group\">
-        {{ form_row(editForm.categorie) }}
     </div>
     <div class=\"form-group\">
         {{ form_row(editForm.roles) }}

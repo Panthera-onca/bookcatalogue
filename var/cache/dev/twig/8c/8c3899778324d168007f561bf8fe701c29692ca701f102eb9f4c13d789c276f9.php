@@ -141,13 +141,25 @@ class __TwigTemplate_1ce784101a78c751e438c1c4de36649d56d28f60f74ebbf81ad2db24ae7
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["StockType"]) || array_key_exists("StockType", $context) ? $context["StockType"] : (function () { throw new RuntimeError('Variable "StockType" does not exist.', 25, $this->source); })()), "quantite_stock", [], "any", false, false, false, 25), 'row');
         echo "
         </div>
-        ";
+        <div class=\"form-group\">
+            ";
         // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["StockType"]) || array_key_exists("StockType", $context) ? $context["StockType"] : (function () { throw new RuntimeError('Variable "StockType" does not exist.', 28, $this->source); })()), "livre", [], "any", false, false, false, 28), 'row');
+        echo "
+        </div>
+        <div class=\"form-group\">
+            ";
+        // line 31
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["StockType"]) || array_key_exists("StockType", $context) ? $context["StockType"] : (function () { throw new RuntimeError('Variable "StockType" does not exist.', 31, $this->source); })()), "site", [], "any", false, false, false, 31), 'row');
+        echo "
+        </div>
+        ";
+        // line 34
         echo "        <button type=\"submit\" class=\"btnBlock btn-lg btn-success\" value=\"Edit\">Ajouter</button>
         ";
-        // line 30
+        // line 36
         echo "        ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["StockType"]) || array_key_exists("StockType", $context) ? $context["StockType"] : (function () { throw new RuntimeError('Variable "StockType" does not exist.', 30, $this->source); })()), 'form_end');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["StockType"]) || array_key_exists("StockType", $context) ? $context["StockType"] : (function () { throw new RuntimeError('Variable "StockType" does not exist.', 36, $this->source); })()), 'form_end');
         echo "
 
 
@@ -174,7 +186,7 @@ class __TwigTemplate_1ce784101a78c751e438c1c4de36649d56d28f60f74ebbf81ad2db24ae7
 
     public function getDebugInfo()
     {
-        return array (  149 => 30,  146 => 28,  141 => 25,  136 => 23,  132 => 21,  120 => 18,  116 => 17,  113 => 16,  99 => 8,  95 => 6,  91 => 5,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  161 => 36,  158 => 34,  153 => 31,  147 => 28,  141 => 25,  136 => 23,  132 => 21,  120 => 18,  116 => 17,  113 => 16,  99 => 8,  95 => 6,  91 => 5,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -204,6 +216,12 @@ class __TwigTemplate_1ce784101a78c751e438c1c4de36649d56d28f60f74ebbf81ad2db24ae7
         {{ form_start(StockType, {'method': 'POST', 'attr': {'class': 'formSignIn'} }) }}
         <div class=\"form-group\">
             {{ form_row(StockType.quantite_stock) }}
+        </div>
+        <div class=\"form-group\">
+            {{ form_row(StockType.livre) }}
+        </div>
+        <div class=\"form-group\">
+            {{ form_row(StockType.site) }}
         </div>
         {#<div class=\"text-center\">#}
         <button type=\"submit\" class=\"btnBlock btn-lg btn-success\" value=\"Edit\">Ajouter</button>

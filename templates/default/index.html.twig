@@ -32,21 +32,6 @@
                 {% endif %}
             </ul>
 
-            <!--Form SignIn NavBar-->
-            {#check if role is set and give(if) or not(else) the following.#}
-            {#Can be changed to ROLE_ADMIN for admin etc...#}
-            {#See config/packages/security.yaml for access_control#}
-            {% if is_granted('ROLE_USER') %}
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-
-                        <a class="nav-link btn btn-outline-danger" href="{{ path('app_logout') }}">logout</a>
-
-                    </li>
-                </ul>
-            {% else %}
-                {{ render(controller('App\\Controller\\SecurityController::login')) }}
-            {% endif %}
         </div>
     </nav>
 {% endblock %}
