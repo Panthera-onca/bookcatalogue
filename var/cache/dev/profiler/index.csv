@@ -23,3 +23,9 @@ dab624,::1,GET,http://localhost/bookcatalogue/public/,1616791779,,500
 7bd8a9,::1,GET,http://localhost/bookcatalogue/public/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DApp%255CController%255CSecurityController%253A%253Alogin,1616791885,aa57c0,200
 aa57c0,::1,GET,http://localhost/bookcatalogue/public/,1616791885,,200
 9c8d76,::1,GET,http://localhost/bookcatalogue/public/register,1616791929,,200
+432d9e,::1,GET,http://localhost/bookcatalogue/public/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DApp%255CController%255CSecurityController%253A%253Alogin,1616792508,632109,200
+632109,::1,GET,http://localhost/bookcatalogue/public/,1616792508,,200
+271f9c,::1,GET,http://localhost/bookcatalogue/public/register,1616792516,,200
+c5279b,::1,POST,http://localhost/bookcatalogue/public/register,1616792563,,302
+5945a0,::1,GET,http://localhost/bookcatalogue/public/logout,1616792565,b04762,500
+b04762,::1,GET,http://localhost/bookcatalogue/public/logout,1616792565,,500
