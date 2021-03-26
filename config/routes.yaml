@@ -23,7 +23,7 @@ app_admin_dashboard_livre_add:
     controller: App\Controller\AdminController::addLivre
 
 app_admin_dashboard_stock_add:
-    path: /app_admin_dashboard_stock_add
+    path: /dashboard/stock/add
     controller: App\Controller\AdminController::addStock
 
 app_admin_delete_confirm:

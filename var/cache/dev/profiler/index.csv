@@ -16,3 +16,10 @@ cbf8ec,::1,POST,http://localhost/bookcatalogue/public/register,1616528553,,500
 4d9608,::1,POST,http://localhost/bookcatalogue/public/register,1616528657,,500
 0be19e,::1,GET,http://localhost/bookcatalogue/public/register,1616528873,6d057b,500
 6d057b,::1,POST,http://localhost/bookcatalogue/public/register,1616528873,,500
+d0efda,::1,GET,http://localhost/bookcatalogue/public/,1616790921,0f10d5,500
+0f10d5,::1,GET,http://localhost/bookcatalogue/public/,1616790922,,500
+5fd5f8,::1,GET,http://localhost/bookcatalogue/public/,1616791779,dab624,500
+dab624,::1,GET,http://localhost/bookcatalogue/public/,1616791779,,500
+7bd8a9,::1,GET,http://localhost/bookcatalogue/public/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DApp%255CController%255CSecurityController%253A%253Alogin,1616791885,aa57c0,200
+aa57c0,::1,GET,http://localhost/bookcatalogue/public/,1616791885,,200
+9c8d76,::1,GET,http://localhost/bookcatalogue/public/register,1616791929,,200

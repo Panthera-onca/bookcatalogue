@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_admin_dashboard') }}">Dashboard</a>
+                    </li>
+                {% elseif is_granted('ROLE_USER') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('search') }}">Recherches des livres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_recherche') }}">Recherche</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_login') }}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+
+            <!--Form SignIn NavBar-->
+            {#check if role is set and give(if) or not(else) the following.#}
+            {#Can be changed to ROLE_ADMIN for admin etc...#}
+            {#See config/packages/security.yaml for access_control#}
+            {% if is_granted('ROLE_USER') %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                        <a class="nav-link btn btn-outline-danger" href="{{ path('app_logout') }}">logout</a>
+
+                    </li>
+                </ul>
+            {% else %}
+                {{ render(controller('App\\Controller\\SecurityController::login')) }}
+            {% endif %}
+        </div>
+    </nav>
+{% endblock %}
