@@ -23,19 +23,14 @@ class LivreType extends AbstractType
             ->add('isbn')
             ->add('filiere', EntityType::class, [
                 'class' => Filiere::class,
-                'mapped' => false,
-                'multiple' => true,
-                'expanded' => true,
-                'by_reference' =>false
-            ])
+                'choice_label' => function ($filiere) {
+                    return $filiere->getNomFiliere();
+                }])
             ->add('categorie', EntityType::class, [
                 'class' => Categorie::class,
-                'mapped' => false,
-                'multiple' => true,
-                'expanded' => true,
-                'by_reference' =>false
-            ])
-        ;
+                'choice_label' => function ($categorie) {
+                    return $categorie->getNomCategorie();
+                }]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

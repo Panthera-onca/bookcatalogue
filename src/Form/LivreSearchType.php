@@ -33,20 +33,14 @@ class LivreSearchType extends AbstractType
             ])
             ->add('filiere', EntityType::class, [
                 'class' => Filiere::class,
-                'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeholder' => 'Filiere'
-                ]
-            ])
+                'choice_label' => function ($filiere) {
+                    return $filiere->getNomFiliere();
+                }])
             ->add('categorie', EntityType::class, [
                 'class' => Categorie::class,
-                'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeholder' => 'Categorie'
-                ]
-            ])
+                'choice_label' => function ($categorie) {
+                    return $categorie->getNomCategorie();
+                }])
             ->add('submit', SubmitType::class, [
                 'label' => 'rechercher'
             ])

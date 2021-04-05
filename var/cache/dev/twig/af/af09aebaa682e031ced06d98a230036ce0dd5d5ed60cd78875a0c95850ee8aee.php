@@ -138,36 +138,7 @@ class __TwigTemplate_ca3c15fa258da74a69e83791f72ca683e91073345aa8ce1cd4a0294397f
         // line 33
         echo "            </ul>
 
-            <!--Form SignIn NavBar-->
-            ";
-        // line 37
-        echo "            ";
-        // line 38
-        echo "            ";
-        // line 39
-        echo "            ";
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 40
-            echo "                <ul class=\"navbar-nav ml-auto\">
-                    <li class=\"nav-item\">
-
-                        <a class=\"nav-link btn btn-outline-danger\" href=\"";
-            // line 43
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">logout</a>
-
-                    </li>
-                </ul>
-            ";
-        } else {
-            // line 48
-            echo "                ";
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SecurityController::login"));
-            echo "
-            ";
-        }
-        // line 50
-        echo "        </div>
+        </div>
     </nav>
 ";
         
@@ -190,7 +161,7 @@ class __TwigTemplate_ca3c15fa258da74a69e83791f72ca683e91073345aa8ce1cd4a0294397f
 
     public function getDebugInfo()
     {
-        return array (  170 => 50,  164 => 48,  156 => 43,  151 => 40,  148 => 39,  146 => 38,  144 => 37,  139 => 33,  133 => 30,  127 => 27,  124 => 26,  118 => 23,  112 => 20,  109 => 19,  103 => 16,  100 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  139 => 33,  133 => 30,  127 => 27,  124 => 26,  118 => 23,  112 => 20,  109 => 19,  103 => 16,  100 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -229,21 +200,6 @@ class __TwigTemplate_ca3c15fa258da74a69e83791f72ca683e91073345aa8ce1cd4a0294397f
                 {% endif %}
             </ul>
 
-            <!--Form SignIn NavBar-->
-            {#check if role is set and give(if) or not(else) the following.#}
-            {#Can be changed to ROLE_ADMIN for admin etc...#}
-            {#See config/packages/security.yaml for access_control#}
-            {% if is_granted('ROLE_USER') %}
-                <ul class=\"navbar-nav ml-auto\">
-                    <li class=\"nav-item\">
-
-                        <a class=\"nav-link btn btn-outline-danger\" href=\"{{ path('app_logout') }}\">logout</a>
-
-                    </li>
-                </ul>
-            {% else %}
-                {{ render(controller('App\\\\Controller\\\\SecurityController::login')) }}
-            {% endif %}
         </div>
     </nav>
 {% endblock %}

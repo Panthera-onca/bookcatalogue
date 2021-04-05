@@ -99,115 +99,54 @@ class __TwigTemplate_af8435f19a2aff4f651103da79d6b56ba88c0604cebe1e580f0d17207a7
                     <p class=\"card-title\">Il n'ya pas des livres !</p>
                 </div>
             ";
-            } elseif ((0 !== twig_compare(twig_get_attribute($this->env, $this->source,             // line 10
-$context["livre"], "id", [], "any", false, false, false, 10), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "livre", [], "any", false, false, false, 10), "id", [], "any", false, false, false, 10)))) {
+            } else {
                 // line 11
                 echo "                ";
-                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["livre"], "id", [], "any", false, false, false, 11), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "livre", [], "any", false, false, false, 11), "id", [], "any", false, false, false, 11)))) {
-                    // line 12
-                    echo "                    <div class=\"card\">
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, $context["livre"]);
+                echo "
+                    <div class=\"card\">
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\">titre_livre : ";
-                    // line 14
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "titre_livre", [], "any", false, false, false, 14), "html", null, true);
-                    echo "</h5>
+
+                            <p class=\"card-text\">titre : ";
+                // line 15
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "titreLivre", [], "any", false, false, false, 15), "html", null, true);
+                echo "</p>
                             <p class=\"card-text\">auteur : ";
-                    // line 15
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "auteur", [], "any", false, false, false, 15), "html", null, true);
-                    echo "</p>
+                // line 16
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "auteur", [], "any", false, false, false, 16), "html", null, true);
+                echo "</p>
                             <p class=\"card-text\">filiere : ";
-                    // line 16
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "filiere", [], "any", false, false, false, 16), "html", null, true);
-                    echo "</p>
+                // line 17
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "filiere", [], "any", false, false, false, 17), "html", null, true);
+                echo "</p>
                             <p class=\"card-text\">categorie :";
-                    // line 17
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "categorie", [], "any", false, false, false, 17), "html", null, true);
-                    echo "</p>
+                // line 18
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["livre"], "categorie", [], "any", false, false, false, 18), "html", null, true);
+                echo "</p>
                             <p class=\"card-footer\">
                                 <small class=\"text-muted\">Livres ajoutees</small>
                             </p>
                         </div>
                     </div>
-                ";
-                }
-                // line 24
-                echo "
             ";
             }
-            // line 26
+            // line 25
             echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['livre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
-        echo "    </div>
-    <div class=\"card-deck\">
-        ";
-        // line 29
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["stocks"]) || array_key_exists("stocks", $context) ? $context["stocks"] : (function () { throw new RuntimeError('Variable "stocks" does not exist.', 29, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["stock"]) {
-            // line 30
-            echo "            ";
-            if (twig_test_empty($context["stock"])) {
-                // line 31
-                echo "                <div class=\"card\">
-                    <p class=\"card-title\">Il n'ya pas des livres en stock !</p>
-                </div>
-            ";
-            } elseif ((0 !== twig_compare(twig_get_attribute($this->env, $this->source,             // line 34
-$context["stock"], "id", [], "any", false, false, false, 34), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "stock", [], "any", false, false, false, 34), "id", [], "any", false, false, false, 34)))) {
-                // line 35
-                echo "                ";
-                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["stock"], "id", [], "any", false, false, false, 35), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "stock", [], "any", false, false, false, 35), "id", [], "any", false, false, false, 35)))) {
-                    // line 36
-                    echo "                    <div class=\"card\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">quantite_stock : ";
-                    // line 38
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "quantite_stock", [], "any", false, false, false, 38), "html", null, true);
-                    echo "</h5>
-                            <p class=\"card-text\">date_modification : ";
-                    // line 39
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "date_modification", [], "any", false, false, false, 39), "html", null, true);
-                    echo "</p>
-                            <p class=\"card-text\">site : ";
-                    // line 40
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "site", [], "any", false, false, false, 40), "html", null, true);
-                    echo "</p>
-                            <p class=\"card-text\">livre :";
-                    // line 41
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["stock"], "livre", [], "any", false, false, false, 41), "html", null, true);
-                    echo "</p>
-                            <p class=\"card-footer\">
-                                <small class=\"text-muted\">Livres en stock</small>
-                            </p>
-                        </div>
-                    </div>
-                ";
-                }
-                // line 48
-                echo "
-            ";
-            }
-            // line 50
-            echo "        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['stock'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 26
         echo "    </div>
     <div class=\"text-center\">
         <a class=\"btn btn-lg btn-dark\" href=\"";
-        // line 53
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_searchLivre");
         echo "\">Retour</a>
     </div>
     <div class=\"text-center\">
         <a class=\"btn btn-lg btn-dark\" href=\"";
-        // line 56
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_recherche");
         echo "\">Stock</a>
     </div>
@@ -232,7 +171,7 @@ $context["stock"], "id", [], "any", false, false, false, 34), twig_get_attribute
 
     public function getDebugInfo()
     {
-        return array (  211 => 56,  205 => 53,  201 => 51,  195 => 50,  191 => 48,  181 => 41,  177 => 40,  173 => 39,  169 => 38,  165 => 36,  162 => 35,  160 => 34,  155 => 31,  152 => 30,  148 => 29,  144 => 27,  138 => 26,  134 => 24,  124 => 17,  120 => 16,  116 => 15,  112 => 14,  108 => 12,  105 => 11,  103 => 10,  98 => 7,  95 => 6,  91 => 5,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  150 => 31,  144 => 28,  140 => 26,  134 => 25,  124 => 18,  120 => 17,  116 => 16,  112 => 15,  104 => 11,  98 => 7,  95 => 6,  91 => 5,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -246,11 +185,12 @@ $context["stock"], "id", [], "any", false, false, false, 34), twig_get_attribute
                 <div class=\"card\">
                     <p class=\"card-title\">Il n'ya pas des livres !</p>
                 </div>
-            {% elseif livre.id != app.livre.id %}
-                {% if livre.id != app.livre.id %}
+            {% else %}
+                {{dump(livre)}}
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\">titre_livre : {{ livre.titre_livre }}</h5>
+
+                            <p class=\"card-text\">titre : {{ livre.titreLivre }}</p>
                             <p class=\"card-text\">auteur : {{ livre.auteur }}</p>
                             <p class=\"card-text\">filiere : {{ livre.filiere }}</p>
                             <p class=\"card-text\">categorie :{{ livre.categorie }}</p>
@@ -259,32 +199,6 @@ $context["stock"], "id", [], "any", false, false, false, 34), twig_get_attribute
                             </p>
                         </div>
                     </div>
-                {% endif %}
-
-            {% endif %}
-        {% endfor %}
-    </div>
-    <div class=\"card-deck\">
-        {% for stock in stocks %}
-            {% if stock is empty %}
-                <div class=\"card\">
-                    <p class=\"card-title\">Il n'ya pas des livres en stock !</p>
-                </div>
-            {% elseif stock.id != app.stock.id %}
-                {% if stock.id != app.stock.id %}
-                    <div class=\"card\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">quantite_stock : {{ stock.quantite_stock }}</h5>
-                            <p class=\"card-text\">date_modification : {{ stock.date_modification }}</p>
-                            <p class=\"card-text\">site : {{ stock.site }}</p>
-                            <p class=\"card-text\">livre :{{ stock.livre }}</p>
-                            <p class=\"card-footer\">
-                                <small class=\"text-muted\">Livres en stock</small>
-                            </p>
-                        </div>
-                    </div>
-                {% endif %}
-
             {% endif %}
         {% endfor %}
     </div>

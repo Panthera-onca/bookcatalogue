@@ -24,12 +24,16 @@ class __TwigTemplate_a86d1576d876ad54c308f7c5c48d70cecfbecf47c770a8e29befe414463
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'dashboard' => [$this, 'block_dashboard'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "admin/dashboard.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -41,13 +45,8 @@ class __TwigTemplate_a86d1576d876ad54c308f7c5c48d70cecfbecf47c770a8e29befe414463
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/AddLivre.html.twig"));
 
-        // line 1
-        echo "% extends 'admin/dashboard.html.twig' %}
-";
-        // line 2
-        $this->displayBlock('title', $context, $blocks);
-        // line 3
-        $this->displayBlock('dashboard', $context, $blocks);
+        $this->parent = $this->loadTemplate("admin/dashboard.html.twig", "admin/AddLivre.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -168,14 +167,19 @@ class __TwigTemplate_a86d1576d876ad54c308f7c5c48d70cecfbecf47c770a8e29befe414463
         return "admin/AddLivre.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  150 => 30,  147 => 28,  142 => 25,  137 => 23,  133 => 21,  121 => 18,  117 => 17,  114 => 16,  100 => 8,  96 => 6,  92 => 5,  89 => 4,  79 => 3,  60 => 2,  50 => 3,  48 => 2,  45 => 1,);
+        return array (  149 => 30,  146 => 28,  141 => 25,  136 => 23,  132 => 21,  120 => 18,  116 => 17,  113 => 16,  99 => 8,  95 => 6,  91 => 5,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("% extends 'admin/dashboard.html.twig' %}
+        return new Source("{% extends 'admin/dashboard.html.twig' %}
 {% block title %}DashBoard - Instruments{% endblock %}
 {% block dashboard %}
     <div class=\"insideDash\">

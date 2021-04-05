@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Categorie;
+use App\Entity\Filiere;
 use App\Entity\Livre;
 use App\Entity\Stock;
 use App\Entity\User;
@@ -25,7 +27,6 @@ class SearchController extends AbstractController
     }
 
     /**
-     * Matches /search_livres
      * @Route("/search_livres", name="app_searchLivre", methods={"GET", "POST"})
      * @param Request $request
      * @return Response
@@ -39,19 +40,27 @@ class SearchController extends AbstractController
         $form = $this->createForm(LivreSearchType::class);
         $form->handleRequest($request);
 
-        $livre = $em->getRepository(Livre::class);
 
         if ($form->isSubmitted()) {
+            $search = $request->get('livre_search');
+            $criteres = [];
+            if($search['auteur']){
+                $criteres['auteur'] = $search['auteur'];
+            }
 
-            $livre = $form->get('livres')->getData();
-            $titre_livre = $form->get('titre_livre')->getData();
-            $auteur = $form->get('auteur')->getData();
+            if($search['titre_livre']){
+                $criteres['titre_livre'] = $search['titre_livre'];
+            }
+            $categorie= $em->getRepository(Categorie::class)->find($search['categorie']);
+            $filiere= $em->getRepository(Filiere::class)->find($search['filiere']);
+            $criteres['categorie'] = $categorie;
+            $criteres['filiere'] = $filiere;
+            $livres= $em->getRepository(Livre::class)->findBy($criteres);
 
 
-            return $this->redirectToRoute('app_resultat', [
-                'livre' => $livre,
-                'titre_livre' => $titre_livre,
-                'auteur' => $auteur
+
+            return $this->render('search/resultat.html.twig', [
+                'livres' => $livres,
             ]);
 
         }
@@ -96,22 +105,6 @@ class SearchController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/resultat/{titre_livre}", name="app_resultat", methods={"GET", "POST"})
-     * @param $livre
-     * @return Response
-     */
-    public function resultat($livre)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $livre = $em->getRepository(Livre::class)->findBy(['livre'=>$livre]);
-
-
-        return $this->render('search/resultat.html.twig', [
-            'livres' => $livre,
-        ]);
-    }
 
 
 }

@@ -133,8 +133,6 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $livre = $form->getData();
-            $livres = $form->get('livre')->getData();
-            $livre->setName($livres);
             //get Manager via Doctrine
             $em = $this->getDoctrine()->getManager();
             //keep info
