@@ -27,7 +27,6 @@ class __TwigTemplate_f62016bdca67108a22eed042ab14ba9eceb4b033d261cfc690412918396
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
-            'resultat' => [$this, 'block_resultat'],
         ];
     }
 
@@ -147,32 +146,9 @@ class __TwigTemplate_f62016bdca67108a22eed042ab14ba9eceb4b033d261cfc690412918396
 
         </div>
     </div>
-    ";
-        // line 39
-        $this->displayBlock('resultat', $context, $blocks);
-        // line 41
-        echo "
+
+
 ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 39
-    public function block_resultat($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "resultat"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "resultat"));
-
-        // line 40
-        echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -193,7 +169,7 @@ class __TwigTemplate_f62016bdca67108a22eed042ab14ba9eceb4b033d261cfc690412918396
 
     public function getDebugInfo()
     {
-        return array (  175 => 40,  165 => 39,  154 => 41,  152 => 39,  144 => 34,  138 => 31,  132 => 28,  126 => 25,  120 => 22,  114 => 19,  107 => 16,  105 => 15,  103 => 14,  101 => 13,  99 => 12,  97 => 11,  89 => 4,  79 => 3,  60 => 2,  37 => 1,);
+        return array (  143 => 34,  137 => 31,  131 => 28,  125 => 25,  119 => 22,  113 => 19,  106 => 16,  104 => 15,  102 => 14,  100 => 13,  98 => 12,  96 => 11,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -236,8 +212,7 @@ class __TwigTemplate_f62016bdca67108a22eed042ab14ba9eceb4b033d261cfc690412918396
 
         </div>
     </div>
-    {% block resultat %}
-    {% endblock %}
+
 
 {% endblock %}", "search/livre.html.twig", "C:\\wamp64\\www\\bookcatalogue\\templates\\search\\livre.html.twig");
     }

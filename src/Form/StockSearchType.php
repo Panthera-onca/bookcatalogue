@@ -28,11 +28,9 @@ class StockSearchType extends AbstractType
             ])
             ->add('site', EntityType::class, [
                 'class' => Site::class,
-                'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeholder' => 'Site'
-                ]
+                'choice_label' => function ($site){
+                    return $site->getCampus();
+                }
             ])
             ->add('livre', EntityType::class, [
                 'class' => Livre::class,
