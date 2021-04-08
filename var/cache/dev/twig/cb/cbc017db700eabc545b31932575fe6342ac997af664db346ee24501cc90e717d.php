@@ -105,12 +105,21 @@ class __TwigTemplate_a3470829a83a4a5f979e31a865879fca0168f7ddaba9f1f9dfc265c5622
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin_dashboard_stock_add");
         echo "\" class=\"btn btn-lg btn-dark\">Ajouter de stock</a>
+            <a href=\"";
+        // line 11
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin_dashboard_livre");
+        echo "\" class=\"btn btn-lg btn-dark\">Gérer des livres</a>
+            <a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin_dashboard_stock");
+        echo "\" class=\"btn btn-lg btn-dark\">Gérer de stock</a>
+
         </div>
 
         ";
-        // line 13
+        // line 16
         $this->displayBlock('dashboard', $context, $blocks);
-        // line 21
+        // line 24
         echo "
     </div>
 
@@ -124,7 +133,7 @@ class __TwigTemplate_a3470829a83a4a5f979e31a865879fca0168f7ddaba9f1f9dfc265c5622
 
     }
 
-    // line 13
+    // line 16
     public function block_dashboard($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -134,23 +143,23 @@ class __TwigTemplate_a3470829a83a4a5f979e31a865879fca0168f7ddaba9f1f9dfc265c5622
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "dashboard"));
 
-        // line 14
+        // line 17
         echo "            <div class=\"insideDash rounded\">
                 <h4>Bienvenue sur votre tableau de bord ";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 15, $this->source); })()), "username", [], "any", false, false, false, 15), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 18, $this->source); })()), "username", [], "any", false, false, false, 18), "html", null, true);
         echo "</h4>
                 <p>Nombre d'inscrit : ";
-        // line 16
-        echo twig_escape_filter($this->env, (isset($context["totalUser"]) || array_key_exists("totalUser", $context) ? $context["totalUser"] : (function () { throw new RuntimeError('Variable "totalUser" does not exist.', 16, $this->source); })()), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, (isset($context["totalUser"]) || array_key_exists("totalUser", $context) ? $context["totalUser"] : (function () { throw new RuntimeError('Variable "totalUser" does not exist.', 19, $this->source); })()), "html", null, true);
         echo "</p>
                 <p>Nombre des livres: ";
-        // line 17
-        echo twig_escape_filter($this->env, (isset($context["totalLivre"]) || array_key_exists("totalLivre", $context) ? $context["totalLivre"] : (function () { throw new RuntimeError('Variable "totalLivre" does not exist.', 17, $this->source); })()), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, (isset($context["totalLivre"]) || array_key_exists("totalLivre", $context) ? $context["totalLivre"] : (function () { throw new RuntimeError('Variable "totalLivre" does not exist.', 20, $this->source); })()), "html", null, true);
         echo "</p>
                 <p>Nombre de stock: ";
-        // line 18
-        echo twig_escape_filter($this->env, (isset($context["totalStock"]) || array_key_exists("totalStock", $context) ? $context["totalStock"] : (function () { throw new RuntimeError('Variable "totalStock" does not exist.', 18, $this->source); })()), "html", null, true);
+        // line 21
+        echo twig_escape_filter($this->env, (isset($context["totalStock"]) || array_key_exists("totalStock", $context) ? $context["totalStock"] : (function () { throw new RuntimeError('Variable "totalStock" does not exist.', 21, $this->source); })()), "html", null, true);
         echo "</p>
             </div>
         ";
@@ -174,7 +183,7 @@ class __TwigTemplate_a3470829a83a4a5f979e31a865879fca0168f7ddaba9f1f9dfc265c5622
 
     public function getDebugInfo()
     {
-        return array (  153 => 18,  149 => 17,  145 => 16,  141 => 15,  138 => 14,  128 => 13,  114 => 21,  112 => 13,  106 => 10,  102 => 9,  98 => 8,  94 => 7,  89 => 4,  79 => 3,  60 => 2,  37 => 1,);
+        return array (  162 => 21,  158 => 20,  154 => 19,  150 => 18,  147 => 17,  137 => 16,  123 => 24,  121 => 16,  114 => 12,  110 => 11,  106 => 10,  102 => 9,  98 => 8,  94 => 7,  89 => 4,  79 => 3,  60 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -189,6 +198,9 @@ class __TwigTemplate_a3470829a83a4a5f979e31a865879fca0168f7ddaba9f1f9dfc265c5622
             <a class=\"btn btn-lg btn-dark\" href=\"{{ path('app_admin_dashboard_user') }}\">Gérer user</a>
             <a href=\"{{ path('app_admin_dashboard_livre_add') }}\" class=\"btn btn-lg btn-dark\">Ajouter des livres</a>
             <a href=\"{{ path('app_admin_dashboard_stock_add') }}\" class=\"btn btn-lg btn-dark\">Ajouter de stock</a>
+            <a href=\"{{ path('app_admin_dashboard_livre') }}\" class=\"btn btn-lg btn-dark\">Gérer des livres</a>
+            <a href=\"{{ path('app_admin_dashboard_stock') }}\" class=\"btn btn-lg btn-dark\">Gérer de stock</a>
+
         </div>
 
         {% block dashboard %}

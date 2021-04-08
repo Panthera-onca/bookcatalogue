@@ -83,12 +83,12 @@ class StockController extends AbstractController
      */
     public function delete(Request $request, Stock $stock): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$stock->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('token_id', $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($stock);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('stock_index');
+        return $this->redirectToRoute('stock_delete');
     }
 }

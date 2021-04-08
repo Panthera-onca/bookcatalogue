@@ -1,0 +1,33 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block title %}Edit Stock{% endblock %}
+
+{% block dashboard %}
+
+    {{ form_start(editForm, {'method': 'POST', 'attr': {'class': 'formSignIn'} }) }}
+    <div class="form-group">
+        {{ form_row(editForm.dateModification) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(editForm.resume) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(editForm.site) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(editForm.livre) }}
+    </div>
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('edit') }}"
+    >
+    <div class="text-center">
+        <button type="submit" class="btnBlock btn-lg btn-success" value="Edit">Modifier</button>
+    </div>
+    {{ form_end(editForm) }}
+
+    <a class="btn btn-lg btn-dark" href="{{ path('app_admin_dashboard_stock') }}">Retour</a>
+
+
+
+
+{% endblock %}

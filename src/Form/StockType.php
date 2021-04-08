@@ -24,11 +24,9 @@ class StockType extends AbstractType
             ->add('date_modification')
             ->add('site', EntityType::class, [
                 'class' => Site::class,
-                'mapped' => false,
-                'multiple' => true,
-                'expanded' => true,
-                'by_reference' =>false
-            ])
+                'choice_label' => function ($campus) {
+                    return $campus->getCampus();
+                }])
             ->add('livre',EntityType::class, [
                 'class' => Livre::class,
                 'mapped' => false,

@@ -1,0 +1,41 @@
+{% extends 'admin/dashboard.html.twig' %}
+{% block title %}DashBoard - Users{% endblock %}
+{% block dashboard %}
+    <div class="insideDash">
+        {% for message in app.flashes('success') %}
+            <div class="text-center" style="margin-top: 1%">
+                <div class="alert alert-success" role="alert" style="width: 35% ;margin: auto;">
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="card-deck">
+            {% for livre in livres %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre : {{ livre.titreLivre }}</h5>
+                        <p class="card-text">ID : {{ livre.id }}</p>
+                        <p class="card-text">Auteur : {{ livre.auteur }}</p>
+                        <p class="card-text">Refeni : {{ livre.refEni }}</p>
+                        <p class="card-text">ISBN : {{ livre.isbn }}</p>
+                        <p class="card-footer">
+                            <small class="text-muted">Filiere : {{ livre.filiere|json_encode }}</small>
+                        </p>
+                    </div>
+                    <div class="inline text-center">
+                        <a id="editPr" class="updateLink"
+                           href="{{ path('app_admin_dashboard_livre_edit',  {'titre_livre': livre.titreLivre}) }}"><i
+                                    class="far fa-edit"></i></a>
+                        <a id="editPr" class="updateLink"
+                           href="{{ path('app_admin_livre_delete_confirm', {'id': livre.id}) }}"><i
+                                    class="fas fa-user-times"></i></a>
+                    </div>
+
+
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

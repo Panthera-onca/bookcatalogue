@@ -83,12 +83,12 @@ class FiliereController extends AbstractController
      */
     public function delete(Request $request, Filiere $filiere): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$filiere->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('token_id', $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($filiere);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('filiere_index');
+        return $this->redirectToRoute('filiere_delete');
     }
 }

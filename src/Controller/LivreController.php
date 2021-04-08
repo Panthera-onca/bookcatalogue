@@ -82,12 +82,12 @@ class LivreController extends AbstractController
      */
     public function delete(Request $request, Livre $livre): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$livre->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('token_id', $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($livre);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('livre_index');
+        return $this->redirectToRoute('livre_delete');
     }
 }

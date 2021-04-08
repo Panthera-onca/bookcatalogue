@@ -83,12 +83,12 @@ class SiteController extends AbstractController
      */
     public function delete(Request $request, Site $site): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$site->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('token_id', $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($site);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('site_index');
+        return $this->redirectToRoute('site_delete');
     }
 }

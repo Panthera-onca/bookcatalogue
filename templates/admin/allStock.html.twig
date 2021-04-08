@@ -1,0 +1,41 @@
+{% extends 'admin/dashboard.html.twig' %}
+{% block title %}DashBoard - Users{% endblock %}
+{% block dashboard %}
+    <div class="insideDash">
+        {% for message in app.flashes('success') %}
+            <div class="text-center" style="margin-top: 1%">
+                <div class="alert alert-success" role="alert" style="width: 35% ;margin: auto;">
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="card-deck">
+            {% for stock in stocks %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">ID : {{ stock.id }}</h5>
+                        <p class="card-text">Quantité en stock : {{ stock.quantiteStock }}</p>
+                        <p class="card-text">Date de modification : {{ stock.dateModification }}</p>
+                        <p class="card-text">Livre : {{ stock.livre }}</p>
+                        <p class="card-footer">
+                            <small class="text-muted">Site : {{ stock.site|json_encode }}</small>
+                        </p>
+
+                    </div>
+                    <div class="inline text-center">
+                        <a id="editPr" class="updateLink"
+                           href="{{ path('app_admin_dashboard_stock_edit',  {'titre_livre': livre.titreLivre}) }}"><i
+                                    class="far fa-edit"></i></a>
+                        <a id="editPr" class="updateLink"
+                           href="{{ path('app_admin_stock_delete_confirm', {'id': livre.id}) }}"><i
+                                    class="fas fa-user-times"></i></a>
+                    </div>
+
+
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}
