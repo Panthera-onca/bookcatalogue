@@ -92,13 +92,27 @@ class LivreController extends AbstractController
     }
 
     /**
-     * @Route("/reserver/{id}", name="livre_reserver", methods={"GET", "POST})
+     * @Route("/livre/{id}", name="livre_delete", methods={"DELETE"})
      */
-    public function reserver(Livre $livre): Response
+    public function deleteA(Request $request, Livre $livre): Response
+    {
+        if ($this->isCsrfTokenValid('token_id', $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($livre);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('livre_delete');
+    }
+
+
+    /**
+     * @Route("/livre/{id}/edit", name="livre_reserver", methods={"GET","POST"})
+     */
+    public function reserver(Request $request, Livre $livre): Response
     {
         die("done !");
-        return $this->render('livre/show.html.twig', [
-            'livre' => $livre,
-        ]);
     }
+
+
 }
