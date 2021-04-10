@@ -107,7 +107,7 @@ class LivreController extends AbstractController
 
 
     /**
-     * @Route("/livre/{id}/edit", name="livre_reserver", methods={"GET","POST"})
+     * @Route("/reserver/{id}", name="livre_reserver", methods={"GET","POST"})
      */
     public function reserver(Request $request, Livre $livre): Response
     {
