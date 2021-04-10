@@ -96,6 +96,7 @@ class LivreController extends AbstractController
      */
     public function reserver(Livre $livre): Response
     {
+        die("done !");
         return $this->render('livre/show.html.twig', [
             'livre' => $livre,
         ]);
