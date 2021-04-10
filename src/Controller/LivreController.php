@@ -90,4 +90,14 @@ class LivreController extends AbstractController
 
         return $this->redirectToRoute('livre_delete');
     }
+
+    /**
+     * @Route("/reserver/{id}", name="livre_reserver", methods={"GET", "POST})
+     */
+    public function reserver(Livre $livre): Response
+    {
+        return $this->render('livre/show.html.twig', [
+            'livre' => $livre,
+        ]);
+    }
 }
