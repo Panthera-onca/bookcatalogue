@@ -61,9 +61,15 @@ class Livre
      */
     private $stocks;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Reservation::class, mappedBy="livre")
+     */
+    private $reservations;
+
     public function __construct()
     {
         $this->stocks = new ArrayCollection();
+        $this->reservations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -188,5 +194,35 @@ class Livre
     public function __toString()
     {
         return (string) $this->getId();
+    }
+
+    /**
+     * @return Collection|Reservation[]
+     */
+    public function getReservations(): Collection
+    {
+        return $this->reservations;
+    }
+
+    public function addReservation(Reservation $reservation): self
+    {
+        if (!$this->reservations->contains($reservation)) {
+            $this->reservations[] = $reservation;
+            $reservation->setLivre($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReservation(Reservation $reservation): self
+    {
+        if ($this->reservations->removeElement($reservation)) {
+            // set the owning side to null (unless already changed)
+            if ($reservation->getLivre() === $this) {
+                $reservation->setLivre(null);
+            }
+        }
+
+        return $this;
     }
 }
