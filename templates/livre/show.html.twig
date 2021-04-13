@@ -38,5 +38,7 @@
 
     <a href="{{ path('livre_edit', {'id': livre.id}) }}">edit</a>
 
+    <a href="{{ path('livre_reserver', {'id': livre.id}) }}">Reserver</a>
+
     {{ include('livre/_delete_form.html.twig') }}
 {% endblock %}

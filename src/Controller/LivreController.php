@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Entity\Livre;
+use App\Entity\Reservation;
 use App\Form\LivreType;
 use App\Repository\LivreRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -107,11 +108,21 @@ class LivreController extends AbstractController
 
 
     /**
-     * @Route("/reserver/{id}", name="livre_reserver", methods={"GET","POST"})
+     * @Route("/reserver/Livre/{id}", name="livre_reserver", methods={"GET","POST"})
      */
     public function reserver(Request $request, Livre $livre): Response
     {
-        die("done !");
+        $reservation = new Reservation();
+        $reservation->setLivre($livre);
+        $reservation->setUser($this->getUser());
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($reservation);
+        $em->flush();
+
+        return $this->render('livre/show.html.twig', [
+            'livre' => $livre,
+        ]);
     }
 
 
