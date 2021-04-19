@@ -1,8 +1,7 @@
 Monolog Bridge
 ==============
 
-The Monolog bridge provides integration for
-[Monolog](https://seldaek.github.io/monolog/) with various Symfony components.
+Provides integration for Monolog with various Symfony components.
 
 Resources
 ---------
