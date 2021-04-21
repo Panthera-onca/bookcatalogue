@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Tests\Controller;
+namespace App\Tests\Controller\Controller;
 
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class SecurityControllerTest extends WebTestCase
 {
-    public function testSomething(): void
+    public function testLogin(): void
     {
         $client = static::createClient();
         $userRepository = static::$container->get(UserRepository::class);
