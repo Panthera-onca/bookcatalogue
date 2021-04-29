@@ -49,6 +49,7 @@ class RegistrationFormType extends AbstractType
                 'multiple' => true,
                 'label' => 'roles'
             ])
+            /*
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
@@ -57,6 +58,7 @@ class RegistrationFormType extends AbstractType
                     ])
                 ]
             ])
+            */
 
             //Child for submit button
             ->add('Inscription', SubmitType::class)
