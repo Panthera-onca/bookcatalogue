@@ -40,6 +40,7 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('nom')
             ->add('prenom')
+            /*
             ->add('roles', ChoiceType::class, [
                 'choices' =>[
                     'User' => 'ROLE_USER',
@@ -49,6 +50,7 @@ class RegistrationFormType extends AbstractType
                 'multiple' => true,
                 'label' => 'roles'
             ])
+            */
             /*
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
